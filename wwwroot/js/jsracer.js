@@ -1,7 +1,7 @@
 var config = {
     type: Phaser.WEBGL,
-    width: 2000,
-    height: 2000,
+    width: 1200,
+    height: 1200,
     backgroundColor: '#2d2d2d',
     scene: {
         preload: preload,
@@ -42,6 +42,8 @@ function create ()
     vehicle.vehicleSprite.flipY = true;
     vehicle.vehicleSprite.angle = 180;
     speed = Phaser.Math.GetSpeed(100, 1);
+    this.cameras.main.setSize(1200, 1200);
+    this.cameras.main.startFollow(vehicle.vehicleSprite);
 }
 
 
